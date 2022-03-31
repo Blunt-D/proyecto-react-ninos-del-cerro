@@ -1,4 +1,5 @@
 import './NavBar.css'
+import CartWidget from '../CartWidget/CartWidget';
 
 const NavBar = () => {
     return <>
@@ -34,6 +35,9 @@ const NavBar = () => {
                                     <li><a class="dropdown-item" href="./paginas/novapasareltiempo.html">No va a pasar el tiempo en vano</a></li>
                                 </ul>
                             </div>
+                        </li>
+                        <li class="nav-item">
+                            <CartWidget />
                         </li>
                     </ul>
                 </div>
