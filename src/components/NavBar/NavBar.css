@@ -68,6 +68,7 @@ div.row {
 background-color: #fed177;
 }
 
+
 .card-title {
 text-align: center;
 }
@@ -77,7 +78,7 @@ text-align: center;
 }
 
 .card-body {
-background-color: #fed177;
+background-color: #fed177
 }
 
 footer {
@@ -88,39 +89,5 @@ form {
 background-color: #fed177;
 }
 
-.titulo__h1 {
-font-size: 30px;
-text-align: center;
-text-decoration: underline;
-}
 
-.titulo__h2 {
-font-size: 25px;
-text-align: center;
-text-decoration: underline;
-}
-
-.titulo__h3 {
-font-size: 20px;
-text-align: center;
-text-decoration: underline;
-}
-
-@media (min-width: 576px) {
-.titulo__h1 {
-font-size: 40px;
-text-align: center;
-text-decoration: underline;
-}
-.titulo__h2 {
-font-size: 35px;
-text-align: center;
-text-decoration: underline;
-}
-.titulo__h3 {
-font-size: 30px;
-text-align: center;
-text-decoration: underline;
-}
-}
 /*# sourceMappingURL=style.css.map */

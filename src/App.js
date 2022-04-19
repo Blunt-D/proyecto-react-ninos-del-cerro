@@ -27,12 +27,6 @@ function App() {
         </BrowserRouter>
         {/* <ItemListContainer greeting={'Tienda Niños del Cerro'}/> */}
         {/* { show ? <ItemCount initial={1} stock={5} onAdd={handleOnAdd}/> : null} Comentado por ahora por motivos de la disposición de los nuevos elementos */}
-        <div class="container-fluid">
-        <div class="row">
-        {/* <ItemDetailContainerTote/>
-        <ItemDetailContainerPolera/> */}
-        </div>
-        </div>
       </header>
     </div>
   );

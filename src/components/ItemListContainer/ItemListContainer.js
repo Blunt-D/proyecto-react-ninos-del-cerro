@@ -20,8 +20,7 @@ const ItemListContainer = (props) => {
 
     
     return(
-        <div>
-        <h1 className="mt-5 pt-4">{props.greeting}</h1>
+        <div className='container mt-5 pt-5 mb-5 gx-5'>
         <ItemList products={products}/>
         </div>
     )
