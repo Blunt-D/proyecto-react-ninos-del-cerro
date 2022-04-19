@@ -34,7 +34,7 @@ const NavBar = () => {
                         </li>
                         <li className="nav-item">
                             <div className="btn-group">
-                                <a className="nav-link" href="paginas/discografia.html">Tienda</a>
+                                <Link to='/' className="nav-link">Tienda</Link>
                                 <button type="button" className="btn dropdown-toggle dropdown-toggle-split " data-bs-toggle="dropdown" aria-expanded="false">
                                     <span className="visually-hidden">Toggle Dropdown</span>
                                 </button>
