@@ -1,11 +1,11 @@
 const products = [
     {
-        id: 1,
+        id: '1',
         name: 'Polera Niños del Cerro',
         price: '12000',
-        category: 'merchandising',
+        category: 'polera',
         color: 'negro',
-        img: './images/polerandc.jpeg',
+        img: '/images/polerandc.jpeg',
         color1: 'negro',
         color2: 'blanco',
         talla1: 'S',
@@ -15,21 +15,26 @@ const products = [
         description: 'Polera blanca con logo Niños del Cerro'
     },
     {
-        id: 2,
+        id: '2',
         name: 'Bolsa Niños del Cerro',
         price: '8000',
-        category: 'merchandising',
+        category: 'tote',
         color1: 'blanco',
-        img: './images/totendc.jpeg',
+        img: '/images/totendc.jpeg',
         stock: 20,
         description: 'Bolsa blanca con logo Niños del Cerro'
     }
 ]
 
-export const getProducts = () => {
+const category = [
+    {id: 'polera', description: 'Polera'},
+    {id: 'tote', description: 'Bolsa Tote'},
+]
+
+export const getProducts = (categoryId) => {
     return new Promise (resolve => {
         setTimeout(() => {
-            resolve(products)
+            resolve(categoryId ? products.filter(prod => prod.category === categoryId) : products)
         }, 2000)
     })
 }
@@ -37,7 +42,17 @@ export const getProducts = () => {
 export const getProductsById = (id) => {
     return new Promise (resolve => {
         setTimeout(() => {
-            resolve(products.find(prod => prod.id === id))
-        }, 2000)
+            resolve(products.find(prod => prod.id == id))
+        }, 500)
+    })
+}
+
+
+
+export const getCategories = () => {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve(category)
+        }, 500)
     })
 }
