@@ -1,3 +1,4 @@
+import ItemCount from "../ItemListContainer/ItemCount/ItemCount"
 
 const ItemDetail = ({  name, img, category, description, price, stock }) => {
     return (
@@ -15,7 +16,7 @@ const ItemDetail = ({  name, img, category, description, price, stock }) => {
                         Precio: {price}
                     </p>
                     <p className="card-text">
-                        Stock: {stock}
+                        <ItemCount />
                     </p>
             </div>
         </div>
