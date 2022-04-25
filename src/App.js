@@ -1,20 +1,20 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import {useState, useEffect} from 'react'
+import {useState, useEffect, createContext} from 'react'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom'
+import { CartContextProvider } from './Context/CartContext';
+
 
 function App() {
-    const [show, setShow] = useState(true)
 
-  // const handleOnAdd = (quantity) => {
-  //   console.log(`Se agregaron ${quantity} producto(s)`)
-  // } Pendiente por ahora hasta aplicar el counter
+
 
   return (
     <div className="App">
-      <header className="App-header">
+      <CartContextProvider>
+      <header className="App-header"> 
         <BrowserRouter>
         <NavBar />
         <Routes>
@@ -27,6 +27,7 @@ function App() {
         {/* <ItemListContainer greeting={'Tienda Niños del Cerro'}/> */}
         {/* { show ? <ItemCount initial={1} stock={5} onAdd={handleOnAdd}/> : null} Comentado por ahora por motivos de la disposición de los nuevos elementos */}
       </header>
+      </CartContextProvider>
     </div>
   );
 }
