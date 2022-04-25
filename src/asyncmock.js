@@ -23,12 +23,49 @@ const products = [
         img: '/images/totendc.jpeg',
         stock: 20,
         description: 'Bolsa blanca con logo Niños del Cerro'
-    }
+    },
+    {
+        id: '3',
+        name: 'Disco Nonato Coo',
+        price: '8000',
+        category: 'Compact Disc',
+        img: '/images/nonatocoo.jpg',
+        stock: 20,
+        description: 'Primer Largaduración de Niños del Cerro'
+    },
+    {
+        id: '4',
+        name: 'Disco Lance',
+        price: '8000',
+        category: 'Compact Disc',
+        img: '/images/lance.jpg',
+        stock: 20,
+        description: 'Segundo Largaduración de Niños del Cerro'
+    },
+    {
+        id: '5',
+        name: 'Disco Cuauhtemoc',
+        price: '8000',
+        category: 'Compact Disc',
+        img: '/images/ndc-cuautemoc.png',
+        stock: 20,
+        description: 'Primer EP de Niños del Cerro'
+    },
+    {
+        id: '6',
+        name: 'Disco No va a pasar el Tiempo en Vano',
+        price: '8000',
+        category: 'Compact Disc',
+        img: '/images/no_va_a_pasar_el_tiempo_en_vano.jpg',
+        stock: 20,
+        description: 'Primer Largaduración de Niños del Cerro'
+    },
 ]
 
 const category = [
     {id: 'polera', description: 'Polera'},
     {id: 'tote', description: 'Bolsa Tote'},
+    {id: 'Compact Disc', description: 'Disco compacto en su JewelCase'},
 ]
 
 export const getProducts = (categoryId) => {

@@ -41,6 +41,7 @@ const NavBar = () => {
                                 <ul className="dropdown-menu dropdown-menu-end">
                             <li><Link to='category/polera'>Polera</Link></li>
                             <li><Link to='category/tote'>Bolsa</Link></li>
+                            <li><Link to='category/Compact Disc'>Discos</Link></li>
                                 </ul>
                             </div>
                         </li>
