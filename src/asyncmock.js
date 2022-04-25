@@ -58,7 +58,7 @@ const products = [
         category: 'Compact Disc',
         img: '/images/no_va_a_pasar_el_tiempo_en_vano.jpg',
         stock: 20,
-        description: 'Primer Largaduración de Niños del Cerro'
+        description: 'Primer Disco en vivo de Niños del Cerro'
     },
 ]
 
