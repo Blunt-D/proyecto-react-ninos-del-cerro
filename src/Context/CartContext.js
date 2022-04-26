@@ -13,14 +13,14 @@ export const CartContextProvider = ({ children }) => {
     const getQuantity = () => {
         let count = 0
         cart.forEach(prod => {
-            count += prod.quantity
+            count = count += prod.quantity
         })
 
         return count
     }
 
     const isInCart = (id) => {
-        cart.some(prod => prod.id === id )
+        return cart.some(prod => prod.id === id )
     }
 
     const clearCart = () => {

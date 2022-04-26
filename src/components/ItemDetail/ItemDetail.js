@@ -1,7 +1,7 @@
 import { useState, useContext } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import CartContext from '../../Context/CartContext'
-import Counter from '../ItemListContainer/ItemCount/ItemCount'
+import Counter from '../ItemCount/Counter'
 
 
 const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
@@ -10,7 +10,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
 
     const handleAdd = (count) => {
         const productObj = {
-            id, name,price, quantity: count
+            id, name,price, quantity:count
         }
 
         addItem(productObj)
