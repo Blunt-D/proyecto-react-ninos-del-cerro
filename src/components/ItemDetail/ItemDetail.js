@@ -12,7 +12,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
 
     const handleAdd = (count) => {
         const productObj = {
-            id, name,price, quantity:count
+            id, name,price, quantity:   count
         }
 
         addItem(productObj)

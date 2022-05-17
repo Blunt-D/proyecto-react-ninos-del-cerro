@@ -6,32 +6,31 @@ import { firestoreDb } from '../../services/firebase'
 
 const ItemListContainer = (props) => {
     const[products, setProducts] = useState([])
-
+    const[loading, setLoading] = useState(true)
     
     const {categoryId } = useParams()
 
-
     useEffect(() => {
-//        getProducts(categoryId).then(prods =>{
-//            setProducts(prods)
-//        }).catch(error => {
-//            console.log('error')
-//        })
+        setLoading(true)
 
         const collectionRef = categoryId 
             ? query(collection(firestoreDb, 'products'), where('category', '==', categoryId))
             : collection(firestoreDb, 'products')
 
-
-        getDocs(collectionRef).then(response => {
-            console.log(response);
-            const products = response.docs.map(doc => {
-                return { id: doc.id, ...doc.data()}
+        getDocs(collectionRef)
+            .then(response => {
+                const products = response.docs.map(doc => {
+                    return { id: doc.id, ...doc.data()}
+                })
+                setProducts(products)
             })
-            setProducts(products);
-        })
-
-    }, [categoryId])
+            .catch(error => {
+                console.log(error)
+            })
+            .finally(() => {
+                setLoading(false)
+            })
+    }, [categoryId]) 
 
     if(products.length === 0){
         return <h1>No existen productos</h1>
