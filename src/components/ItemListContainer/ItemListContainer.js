@@ -1,8 +1,9 @@
-import  {useState, useEffect} from 'react'
+import  {useState} from 'react'
 import ItemList from '../ItemList/ItemList'
 import { useParams } from 'react-router-dom'
-import { collection, getDocs, query, where } from 'firebase/firestore'
-import { firestoreDb } from '../../services/firebase'
+import { getProducts } from '../../services/firebase/firestore'
+import { useAsync } from '../../hooks/useAsync'
+
 
 const ItemListContainer = (props) => {
     const[products, setProducts] = useState([])
@@ -10,27 +11,17 @@ const ItemListContainer = (props) => {
     
     const {categoryId } = useParams()
 
-    useEffect(() => {
-        setLoading(true)
+    useAsync(
+        setLoading,
+        () => getProducts(categoryId),
+        setProducts,
+        () => console.log('hubo un error en item list container')
+        [categoryId]
+    )
 
-        const collectionRef = categoryId 
-            ? query(collection(firestoreDb, 'products'), where('category', '==', categoryId))
-            : collection(firestoreDb, 'products')
-
-        getDocs(collectionRef)
-            .then(response => {
-                const products = response.docs.map(doc => {
-                    return { id: doc.id, ...doc.data()}
-                })
-                setProducts(products)
-            })
-            .catch(error => {
-                console.log(error)
-            })
-            .finally(() => {
-                setLoading(false)
-            })
-    }, [categoryId]) 
+    if(loading) {
+        return <h1>Cargando...</h1>
+    }
 
     if(products.length === 0){
         return <h1>No existen productos</h1>
