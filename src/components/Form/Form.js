@@ -33,24 +33,32 @@ const vaciarDatos = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
 
-            <label  class="form-label">Nombre Completo</label>
+    <div className='container'>
+    <div className="row align-items-start">
+
+    <div className='col-6'>
+    <form onSubmit={handleSubmit}>
+    <label  class="form-label">Nombre Completo</label>
     <input type="text" id='name' onChange={(e) => setName(e.target.value)} onKeyDown={handleKeyDown} class="form-control"/>
     <label class="form-label">Teléfono</label>
     <input type="text" id='phone' onChange={(e) => setPhone(e.target.value)} onKeyDown={handleKeyDown} class="form-control" />
     <label class="form-label">E-mail</label>
     <input type="text" id='mail' onChange={(e) => setMail(e.target.value)} onKeyDown={handleKeyDown} class="form-control" />
     <button type='submit'>submit</button>
+    </form>
+    </div>
 
+    <div className='col-6'>
     <h3>Información del usuario</h3>
     <p>Nombre: {localStorage.name}</p>
     <p>Correo Electrónico: {localStorage.mail}</p>
     <p>Teléfono: {localStorage.phone}</p>
-
     <button onClick={() => vaciarDatos()}>Vaciar Datos</button>
-
-        </form>
+    </div>
+        
+        </div>
+        </div>
     )
 }
 
