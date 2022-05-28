@@ -11,9 +11,6 @@ const NavBar = () => {
     const [categories, setCategories] = useState([])
 
     useEffect(() => {
-    //   getCategories().then(categories => {
-    //     setCategories(categories)
-    //   })
     getDocs(collection(firestoreDb, 'categories')).then(response => {
         const categories = response.docs.map(doc => {
             return {id: doc.id, ...doc.data()}
@@ -46,10 +43,9 @@ const NavBar = () => {
                                     <span className="visually-hidden">Toggle Dropdown</span>
                                 </button>
                                 <ul className="dropdown-menu dropdown-menu-end">
-                            <li><Link to='category/polera'>Polera</Link></li>
-                            <li><Link to='category/tote'>Bolsa</Link></li>
-                            <li><Link to='category/Compact Disc'>Discos</Link></li>
-                                </ul>
+                            {categories.map(cat => <li><NavLink key={cat.id} to={`/category/${cat.id}`}
+                            className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}
+                            >{cat.description}</NavLink></li>)}                                </ul>
                             </div>
                         </li>
                         <li className="nav-item">
