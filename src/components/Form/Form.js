@@ -19,10 +19,17 @@ const Form = () => {
 localStorage.name = name
 localStorage.phone = phone
 localStorage.mail = mail
+
+console.log(localStorage);
+window.location.reload();
+
+
+
 }
 
 const vaciarDatos = () => {
     localStorage.clear()
+    window.location.reload();
 }
 
 
