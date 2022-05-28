@@ -55,7 +55,7 @@ export const CartContextProvider = ({ children }) => {
             total += prod.price * prod.quantity
         })
         console.log(total);
-        return <div>${total}</div>
+        return total
     }
 
     return(
