@@ -64,7 +64,7 @@ const Cart = () => {
                 }
             }).then(({id}) => {
                 batch.commit()
-                console.log(`El id de la orden es ${id} `)
+                console.log(`Compra exitosa. El id de la orden es ${id} `)
             }).catch(error => {
                 return console.log("error", error.message)
             }).finally(() => {

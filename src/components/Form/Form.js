@@ -21,9 +21,9 @@ localStorage.phone = phone
 localStorage.mail = mail
 
 if(name && phone && mail != ''){
-    alert('tus datos han sido ingresados exitósamente!')
+    console.log('tus datos han sido ingresados exitósamente!')
 } else {
-    alert('Rellena todos los campos')
+    console.log('Rellena todos los campos')
 }
 
 console.log(localStorage);
