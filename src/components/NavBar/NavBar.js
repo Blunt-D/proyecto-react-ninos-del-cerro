@@ -34,7 +34,7 @@ const NavBar = () => {
                 <div className="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="./paginas/contacto.html">Contacto</a>
+                            <Link to='/form' className="nav-link active" aria-current="page" href="./paginas/contacto.html">Formulario de contacto</Link>
                         </li>
                         <li className="nav-item">
                             <div className="btn-group">
@@ -45,7 +45,8 @@ const NavBar = () => {
                                 <ul className="dropdown-menu dropdown-menu-end">
                             {categories.map(cat => <li><NavLink key={cat.id} to={`/category/${cat.id}`}
                             className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}
-                            >{cat.description}</NavLink></li>)}                                </ul>
+                            >{cat.description}</NavLink></li>)}                               
+                            </ul>
                             </div>
                         </li>
                         <li className="nav-item">

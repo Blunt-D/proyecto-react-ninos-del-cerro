@@ -27,11 +27,23 @@ En primer lugar, para acceder al funcionamiento completo de la aplicación es ne
 - stock: 20
 > Todos los valores recién indicados corresponden a strings exceptuando 'price' y 'stock'.
 
-### Ubicación
+### Recorrido
 
-> Al arrancar la app ingresando 'npm start' en la terminal, la aplicación nos ubicara en el index inmediatamente, desplegando la tarjeta del producto en cuestión.
+> Al arrancar la app ingresando 'npm start' en la terminal, la aplicación nos ubicara en el index inmediatamente, desplegando la tarjeta del producto en cuestión y la barra de navegación.
 
-> Para acceder a él, es necesario hacer click en el botón "ver detalle" indicado a la base de su tarjeta.
+> Para el propósito de este programa, nos serviremos de tres elementos de la barra de navegación:
+
+- El ícono de Niños del Cerro en la esquina superior izquierda: Nos servirá para retornar a la pantalla inicial.
+- El Formulario de Contacto, en el que podremos ingresar nuestra información de contacto para el correcto despacho de las mercancías.
+- El botón que reza "Tienda". Al cliquear sobre él, nos llevará de vuelta a la vista principal de la tienda, con todos los ítems desplegados. Si cliqueamos sobre la flecha negra a su derecha, se desplegará un menú con enlaces a las distintas categorías de ítems a la venta.
+
+> En primer lugar, es recomendable comenzar accediendo al "Formulario de Contacto". En la columna izquierda podremos ingresar nombre, número de teléfono y dirección de correo electrónico. Esta información será respaldada en el almacenamiento local del navegador para facilitar futuras visitas.
+
+> En la columna de la derecha podremos consultar la información del último usuario que ingresó su información. Podremos sobreescribirla rellenando los campos nuevamente. Asimismo, también podremos eliminar cualquier rastro de nuestros datos (tanto en el navegador como en la aplicación) con el botón "Vaciar Datos".
+
+> Luego de ingresar nuestros datos, podemos volver a la vista principal de la tienda haciendo click en el ícono de Niños del Cerro o en el enlace de la barra de navegación que indica "Tienda".
+
+> Una vez ahí, podremos ver la tarjeta del producto dispuesto para esta prueba. Para acceder a él, es necesario hacer click en el botón "ver detalle" indicado a la base de su tarjeta.
 
 > Esto nos dirigirá hacia la página particular del producto, que enlista sus detalles y nos permite agregar productos al carrito. 
 
@@ -43,4 +55,4 @@ En primer lugar, para acceder al funcionamiento completo de la aplicación es ne
 
 - Con los botones rotulados con 'x' junto a cada producto, podrás eliminar cada producto individualmente. 
 - Con el botón rotulado 'Limpiar carro' podrás vaciar completamente tu carro de compras.
-- Con el botón rotulado 'Crear Orden' podrás enviar tu orden junto a los datos prefijados a la base de datos de Firestore.
+- Si estamos conformes con nuestra orden de compra y hemos corroborado que nuestros datos han sido ingresados correctamente, podremos enviar nuestro pedido con el botón rotulado 'Crear Orden'. Esto generará que tanto tu orden como la información que ingresaste será respaldada en la base de datos de Firestore.
