@@ -3,13 +3,13 @@ import CartContext from '../../Context/CartContext'
 import ItemCart from '../ItemCart/ItemCart'
 import { getDocs, writeBatch, query, where, collection, documentId, addDoc } from 'firebase/firestore'
 import { firestoreDb } from '../../services/firebase/index'
-
-
+import { Link } from "react-router-dom"
 
 const Cart = () => {
     const [loading, setLoading] = useState(false)
 
     const { cart, clearCart, totalCompra, getQuantity } = useContext(CartContext)  
+    
 
     if(loading) {
         return <h1>Se esta generando su orden</h1>
@@ -27,9 +27,9 @@ const Cart = () => {
         const objOrder = {
             items: cart,
             buyer: {
-                name: 'Sebastian Zuviria',
-                phone: '123456789',
-                email: 'szvuria@gmail.com'
+                name: localStorage.name,
+                phone: localStorage.phone,
+                email: localStorage.mail
             },
             total: totalCompra(),
             date: new Date()
@@ -66,7 +66,7 @@ const Cart = () => {
                 batch.commit()
                 console.log(`El id de la orden es ${id} `)
             }).catch(error => {
-                return console.log("error auxilio", error.message)
+                return console.log("error", error.message)
             }).finally(() => {
                 setLoading(false)
             })
@@ -83,6 +83,7 @@ const Cart = () => {
             <li>Total: {totalCompra()}</li>
             <li><button onClick={() => clearCart()}>Limpiar Carro</button></li>
             <li><button onClick={() => createOrder()}>Crear Orden</button></li>
+            <li><Link to='/form'>Checkout</Link></li>
 
         </ul>
         </>
