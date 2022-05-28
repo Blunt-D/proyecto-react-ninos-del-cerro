@@ -53,6 +53,6 @@ En primer lugar, para acceder al funcionamiento completo de la aplicación es ne
 
 > Una vez ahí en el carrito de compras, podrás revisar el detalle de tu compra, el subtotal de cada producto ingresado, y el valor total de tu compra. 
 
-- Con los botones rotulados con 'x' junto a cada producto, podrás eliminar cada producto individualmente. 
-- Con el botón rotulado 'Limpiar carro' podrás vaciar completamente tu carro de compras.
-- Si estamos conformes con nuestra orden de compra y hemos corroborado que nuestros datos han sido ingresados correctamente, podremos enviar nuestro pedido con el botón rotulado 'Crear Orden'. Esto generará que tanto tu orden como la información que ingresaste será respaldada en la base de datos de Firestore.
+> Con los botones rotulados con 'x' junto a cada producto, podrás eliminar cada producto individualmente. 
+> Con el botón rotulado 'Limpiar carro' podrás vaciar completamente tu carro de compras.
+> Si estamos conformes con nuestra orden de compra y hemos corroborado que nuestros datos han sido ingresados correctamente, podremos enviar nuestro pedido con el botón rotulado 'Crear Orden'. Esto generará que tanto tu orden como la información que ingresaste será respaldada en la base de datos de Firestore.
